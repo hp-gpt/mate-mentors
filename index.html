@@ -3,7 +3,104 @@
 
 <head>
     <title>MateMentors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;1,9..40,200&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,600;1,9..40,600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
 
 </head>
+
+<body>
+
+    <div class="header">
+        MateMentors
+    </div>
+
+    <div class="sidebar">
+        <button class="sidebar-link">
+            <a href="index.html"><img src="https://i.postimg.cc/26x1tg4y/home.png"></a>
+
+            Home </button>
+        <button class="sidebar-link">
+            <a href="">
+            </a>
+        </button>
+        <button class="sidebar-link">
+            <a href="">
+            </a>
+        </button>
+        <button class="sidebar-link">
+            <a href="">
+            </a>
+        </button>
+
+        <button class="sidebar-link">
+            <a href="">
+            </a>
+        </button>
+    </div>
+
+    <div class="nav-tabs">
+        <button class="nav-btn" onclick="showSection(1)">Dashboard</button> <button class="nav-btn"
+            onclick="showSection(2)">Find Profiles Matches</button>
+        <button class="nav-btn" onclick="showSection(3)">Send Requests Easily</button>
+        <button class="nav-btn" onclick="showSection(4)">Rate Your Tutors</button>
+
+    </div>
+    <div class="section">
+        <h2>Welcome to Mate Mentors!</h2>
+        <p>
+            This is MateMentors, the place where you can easily find yourself or your ward a tutor who is their age!
+            Students tend to listen and learn more from their peers than their teachers or parents (speaking from
+            personal experience!).
+        </p>
+        <p>
+            This is a medium for students to do exactly that; find students their age or older,
+            who are strong in that certain subject, to tutor them and help them achieve their goals.
+        </p>
+        <p>
+            On the opposite end, students who find that they are particularly strong in a subject can come to this
+            site
+            and help their peers out. This builds a strong community among the users, and brings students across
+            different grades, classes, and schools together.
+        </p>
+        <p>
+            This is something someone like me wishes I had found before, and am now glad to share with my peers,
+            classmates, and my fellow students. I'm so glad you've decided to come to the website! I hope you have a
+            pleasant experience with our site.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2> Match With Profiles Based In Their Strengths In An Instant.</h2>
+    </div>
+
+    <div class="section">
+        Hey.
+    </div>
+
+    <div class="section">
+        Let's get straight to business.
+    </div>
+
+</body>
+<script>
+    function showSection(num) {
+        document.querySelectorAll('.section')
+            .forEach(s => s.style.display = 'none');
+        document.querySelectorAll('.section')[num - 1].style.display = 'block';
+        document.querySelectorAll('.nav-btn')
+            .forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.nav-btn')[num - 1].classList.add('active');
+    }
+
+    showSection(1);
+</script>
 
 </html>
