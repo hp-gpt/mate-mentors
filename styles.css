@@ -1,9 +1,15 @@
 body {
-    background-color: rgb(255, 202, 196);
+    background-color: #ffe9d9;
     font-family: DM Sans;
     color: whitesmoke;
     padding-left: 100px;
     padding-right: 15px;
+    scroll-behavior: smooth;
+}
+
+h2 {
+    color: coral;
+
 }
 
 .header {
@@ -54,12 +60,14 @@ body {
     font-size: 25px;
     top: 120px;
     width: auto;
+    color: black;
     margin-top: 210px;
     padding: 10%;
+    box-shadow: rgba(255, 68, 0, 0.656) 0px 0px 220px 10px;
     border-radius: 50px;
-    background-color: lightcoral;
+    background-color: white;
     margin-bottom: 0px;
-    animation: fadeIn 1s ease;
+    animation: fadeIn 0.5s ease;
 }
 
 @keyframes fadeIn {
@@ -70,12 +78,12 @@ body {
 
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0px);
     }
 }
 
 .sidebar {
-    background-color: coral;
+    background-color: tomato;
     position: fixed;
     top: 20px;
     left: -6px;
@@ -93,13 +101,13 @@ body {
 
 .sidebar-link,
 .sidebar-link:after {
-    background-color: orangered;
-    color: black;
+    background-color: white;
+    color: coral;
+    font-weight: 800;
     font-size: 15px;
     height: 90px;
-    width: auto;
+    width: 90px;
     padding: 15px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -133,7 +141,7 @@ body {
     font-family: DM Sans;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
 
     /* Header smaller on mobile */
     .header {
