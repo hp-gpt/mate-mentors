@@ -44,6 +44,12 @@
             console.log("  Profile image URL: " + responsePayload.picture);
             console.log("  Email: " + responsePayload.email);
             alert(`Hi, ${responsePayload.given_name}!`)
+            // Add [0] to select the first element in the list
+            document.getElementsByClassName('g_id_signin')[0].innerHTML = `
+            <div class="pfp">
+                <img src="${responsePayload.picture}" style="border-radius: 50%; width: 45px; height: 45px;">
+            `;
+
         }
 
 
@@ -59,7 +65,7 @@
         <div id="g_id_onload" data-auto_prompt="false" data-callback="handleCredentialResponse"
             data-client_id="994443423384-6rif7s5vueaf6rm2t1fn6fh8mgsd6j2t.apps.googleusercontent.com"></div>
         <!-- g_id_signin places the button on a page and supports customization -->
-        <div class="g_id_signin"></div>
+        <div class="g_id_signin"> </div>
     </div>
     <div class="sidebar">
         <a href="index.html">
@@ -68,10 +74,10 @@
                 HOME
             </button>
         </a>
-        <a href="">
+        <a href="profile-card.html">
             <button class="sidebar-link">
                 <img src="">
-
+                PROFILE
             </button>
         </a>
         <a href="">

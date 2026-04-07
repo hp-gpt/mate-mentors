@@ -14,6 +14,7 @@ h2 {
 
 .header {
     position: fixed;
+    margin: 0;
     padding: 20px;
     top: 0px;
     left: 0px;
@@ -225,4 +226,11 @@ h2 {
     .photo {
         height: 200px;
     }
+}
+
+.g_id_signin {
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
