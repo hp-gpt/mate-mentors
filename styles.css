@@ -141,7 +141,7 @@ h2 {
     font-family: DM Sans;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 768px) {
 
     /* Header smaller on mobile */
     .header {
@@ -178,30 +178,36 @@ h2 {
     .sidebar-link,
     .sidebar-link:after {
         height: 70px;
-        width: 80px;
-        line-height: 1;
+        width: 70px;
         border-radius: 10px;
+        padding: 2px;
+        justify-content: center;
+        align-items: center;
     }
 
     /* Fix body margins for mobile */
     body {
-        margin-top: 5px !important;
+        margin-top: 0px !important;
         margin-left: 20px !important;
         padding-bottom: 80px;
         padding-left: 0px;
-        padding-top: 2px;
+        padding-top: 0px;
         padding-right: 10px;
+    }
+
+    /* Marquee moves up to match smaller header */
+    .marquee-container {
+        top: 90px;
     }
 
     /* Nav tabs wrap on small screens */
     .nav-tabs {
-        top: 100px;
         height: auto;
         z-index: 1;
-        left: 0;
-        right: 0;
         flex-wrap: wrap;
         column-gap: 10px;
+        left: 0;
+        top: 100px;
         padding: 6px 10px;
     }
 
@@ -212,8 +218,11 @@ h2 {
 
     /* Cards full width on mobile */
     .section {
-        padding: 10%;
         border-radius: 30px;
         margin-left: 0px;
+    }
+
+    .photo {
+        height: 200px;
     }
 }
