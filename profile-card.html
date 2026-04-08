@@ -10,19 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,600;1,9..40,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/jdwXfLDH/image.png">
     <script>
-        // This runs automatically on your other pages
         window.addEventListener('load', function () {
-            // 1. Look for the saved data
             const savedData = localStorage.getItem('userProfile');
 
             if (savedData) {
-                // 2. Use your existing variable name
                 const responsePayload = JSON.parse(savedData);
 
-                // 3. Find the sign-in div (even if it's empty on this page)
+                // 1. Update Header Image
                 const signinElements = document.getElementsByClassName('g_id_signin');
-
                 if (signinElements.length > 0) {
                     signinElements[0].innerHTML = `
                     <div class="pfp">
@@ -31,185 +28,220 @@
                     </div>
                     `;
                 }
+
+                // 2. Update Confirmation Area (MOVED INSIDE HERE)
+                // Using your exact variable names and structure
+                document.getElementById('confirm').innerHTML = `
+                    <input type="radio" value="${responsePayload.email}" name="Email" checked required > 
+                    Confirm email: ${responsePayload.email} <br>
+                    <input type="radio" value="${responsePayload.name}" name="Name" checked required> 
+                    Confirm name: ${responsePayload.name}
+                `;
+
             } else {
-                alert('Please sign in. You will be redirected to the home page to sign in')
+                // If NO data is found
+                alert('Please sign in. You will be redirected to the home page to sign in');
                 window.location.href = "index.html";
             }
         });
 
         function logout() {
-            // 1. Clear the saved profile from browser memory
             localStorage.removeItem('userProfile');
-
-            // 2. Refresh the page to show the login button again
             location.reload();
         }
     </script>
 
 
 </head>
-<div class="header">
-    MateMentors
-    <!-- g_id_onload contains Google Identity Services settings -->
-    <div id="g_id_onload" data-auto_prompt="false" data-callback="handleCredentialResponse"
-        data-client_id="994443423384-6rif7s5vueaf6rm2t1fn6fh8mgsd6j2t.apps.googleusercontent.com"></div>
-    <!-- g_id_signin places the button on a page and supports customization -->
-    <div class="g_id_signin"> </div>
-</div>
-<div class="sidebar">
-    <a href="index.html">
-        <button class="sidebar-link">
-            <img src="https://i.postimg.cc/26x1tg4y/home.png">
-            HOME
-        </button>
-    </a>
-    <a href="">
-        <button class="sidebar-link">
-            <img src="">
 
-        </button>
-    </a>
-    <a href="">
-        <button class="sidebar-link">
-            <img src="">
+<body>
+    <div class="header">
+        <img src='https://i.postimg.cc/jdwXfLDH/image.png' border='0' alt='image'
+            style="border-radius: 50%; height:60px;">
+        MateMentors
+        <img src='https://i.postimg.cc/jdwXfLDH/image.png' border='0' alt='image'
+            style="border-radius: 50%; height:60px;">
+        <!-- g_id_onload contains Google Identity Services settings -->
+        <div id="g_id_onload" data-auto_prompt="false" data-callback="handleCredentialResponse"
+            data-client_id="994443423384-6rif7s5vueaf6rm2t1fn6fh8mgsd6j2t.apps.googleusercontent.com"></div>
+        <!-- g_id_signin places the button on a page and supports customization -->
+        <div class="g_id_signin"> </div>
+    </div>
 
-        </button>
-    </a>
-    <a href="">
-        <button class="sidebar-link">
-            <img src="">
 
-        </button>
-    </a>
-    <a href="">
-        <button class="sidebar-link">
-            <img src="">
+    <div class="sidebar">
+        <a href="index.html">
+            <button class="sidebar-link">
+                <img src="https://i.postimg.cc/26x1tg4y/home.png">
+                HOME
+            </button>
+        </a>
+        <a href="">
+            <button class="sidebar-link">
+                <img src="">
 
-        </button>
-    </a>
-</div>
-<div class="form">
-    <form id="AKfycbyMgeX-lJLzFugXCz2rpdVy-9zdlL_VKrVSPqXsWj1cMrCO8UOH09tQudZ32ImlPeDIng" method="POST"
-        action="https://script.google.com/macros/s/AKfycbyMgeX-lJLzFugXCz2rpdVy-9zdlL_VKrVSPqXsWj1cMrCO8UOH09tQudZ32ImlPeDIng/exec">
+            </button>
+        </a>
+        <a href="">
+            <button class="sidebar-link">
+                <img src="">
 
-        <div class="subjects">
+            </button>
+        </a>
+        <a href="">
+            <button class="sidebar-link">
+                <img src="">
+
+            </button>
+        </a>
+        <a href="">
+            <button class="sidebar-link">
+                <img src="">
+
+            </button>
+        </a>
+    </div>
+    <div class="form">
+        <form method="POST" id="AKfycbyMvB4No5JCkbfZ5rsXZXlINYHyUhqFjRpEQqt2c8XNo_yaUyxDTVXdE9d1KUHSwKhlgQ"
+            action="https://script.google.com/macros/s/AKfycbyMvB4No5JCkbfZ5rsXZXlINYHyUhqFjRpEQqt2c8XNo_yaUyxDTVXdE9d1KUHSwKhlgQ/exec">
+            <div class="confirmation" id="confirm">
+                PLEASE SIGN IN BEFORE TRYING TO FILL THIS AREA IN.
+            </div>
             <div class="strengths">
                 Strong Subjects: <br><br>
-                <input type="checkbox" name="strong-subjects" value=Stron"Mathematics" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Mathematics" class="strengths" required>
                 <span>Mathematics</span>
 
-                <input type="checkbox" name="strong-subjects" value="Physics" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Physics" class="strengths">
                 <span>Physics</span>
 
-                <input type="checkbox" name="strong-subjects" value="Chemistry" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Chemistry" class="strengths">
                 <span>Chemistry</span>
 
-                <input type="checkbox" name="strong-subjects" value="Biology" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Biology" class="strengths">
                 <span>Biology</span>
                 <br><br>
-                <input type="checkbox" name="strong-subjects" value="History" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="History" class="strengths">
                 <span>History</span>
 
-                <input type="checkbox" name="strong-subjects" value="Geography" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Geography" class="strengths">
                 <span>Geography</span>
 
-                <input type="checkbox" name="strong-subjects" value="English" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="English" class="strengths">
                 <span>English</span>
 
-                <input type="checkbox" name="strong-subjects" value="Hindi" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Hindi" class="strengths">
                 <span>Hindi</span>
                 <br><br>
-                <input type="checkbox" name="strong-subjects" value="French" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="French" class="strengths">
                 <span>French</span>
 
-                <input type="checkbox" name="strong-subjects" value="Computer Science" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Computer Science" class="strengths">
                 <span>Computer Science</span>
 
-                <input type="checkbox" name="strong-subjects" value="Robotics" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Robotics" class="strengths">
                 <span>Robotics</span>
 
-                <input type="checkbox" name="strong-subjects" value="Economics" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Economics" class="strengths">
                 <span>Economics</span>
                 <br><br>
-                <input type="checkbox" name="strong-subjects" value="Commerce" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Commerce" class="strengths">
                 <span>Commerce</span>
 
-                <input type="checkbox" name="strong-subjects" value="Business Studies" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Business Studies" class="strengths">
                 <span>Business Studies</span>
 
-                <input type="checkbox" name="strong-subjects" value="Psychology" class="strengths" required>
+                <input type="radio" name="StrongSubjects" value="Psychology" class="strengths">
                 <span>Psychology</span>
             </div>
             <br><br>
             <div class="weaknesses">
                 Weak Subjects: <br><br>
-                <input type="checkbox" name="weak-Subjects" value=Stron"Mathematics" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Mathematics" class="weaknesses" required>
                 <span>Mathematics</span>
 
-                <input type="checkbox" name="weak-Subjects" value="Physics" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Physics" class="weaknesses">
                 <span>Physics</span>
 
-                <input type="checkbox" name="weak-Subjects" value="Chemistry" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Chemistry" class="weaknesses">
                 <span>Chemistry</span>
 
-                <input type="checkbox" name="weak-Subjects" value="Biology" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Biology" class="weaknesses">
                 <span>Biology</span>
                 <br><br>
-                <input type="checkbox" name="weak-Subjects" value="History" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="History" class="weaknesses">
                 <span>History</span>
 
-                <input type="checkbox" name="weak-Subjects" value="Geography" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Geography" class="weaknesses">
                 <span>Geography</span>
 
-                <input type="checkbox" name="weak-Subjects" value="English" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="English" class="weaknesses">
                 <span>English</span>
 
-                <input type="checkbox" name="weak-Subjects" value="Hindi" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Hindi" class="weaknesses">
                 <span>Hindi</span>
                 <br><br>
-                <input type="checkbox" name="weak-Subjects" value="French" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="French" class="weaknesses">
                 <span>French</span>
 
-                <input type="checkbox" name="weak-Subjects" value="Computer Science" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Computer Science" class="weaknesses">
                 <span>Computer Science</span>
 
-                <input type="checkbox" name="weak-Subjects" value="Robotics" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Robotics" class="weaknesses">
                 <span>Robotics</span>
 
-                <input type="checkbox" name="weak-Subjects" value="Economics" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Economics" class="weaknesses">
                 <span>Economics</span>
                 <br><br>
-                <input type="checkbox" name="weak-Subjects" value="Commerce" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Commerce" class="weaknesses">
                 <span>Commerce</span>
 
-                <input type="checkbox" name="weak-Subjects" value="Business Studies" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Business Studies" class="weaknesses">
                 <span>Business Studies</span>
 
-                <input type="checkbox" name="weak-Subjects" value="Psychology" class="weaknesses" required>
+                <input type="radio" name="WeakSubjects" value="Psychology" class="weaknesses">
                 <span>Psychology</span>
             </div>
 
             <br><br>
-            <div class="" <!-- 2. Grade Dropdown -->
-                <div class="grade">
-                    Grade Level: <br>
-                    <select name="StudentGrade" required><br><br>
-                        <option value="" disabled selected>Select Grade</option>
-                        <option value="Grade 5">Grade 5</option>
-                        <option value="Grade 6">Grade 6</option>
-                        <option value="Grade 7">Grade 7</option>
-                        <option value="Grade 8">Grade 8</option>
-                        <option value="Grade 9">Grade 9</option>
-                        <option value="Grade 10">Grade 10</option>
-                        <option value="Grade 11">Grade 11</option>
-                        <option value="Grade 12">Grade 12</option>
-                    </select>
-                </div>
+            <div class="grade">
+                Grade Level: <br>
+                <select name="StudentGrade" required><br><br>
+                    <option value="" disabled selected>Select Grade</option>
+                    <option value="Grade 5">Grade 5</option>
+                    <option value="Grade 6">Grade 6</option>
+                    <option value="Grade 7">Grade 7</option>
+                    <option value="Grade 8">Grade 8</option>
+                    <option value="Grade 9">Grade 9</option>
+                    <option value="Grade 10">Grade 10</option>
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12">Grade 12</option>
+                </select>
             </div>
-            <div class="submit-button"><button type="submit" class="button">Submit</button>
-            </div>
+    </div>
+    <div class="submit-button"><button type="submit" class="button">Submit</button>
+    </div>
     </form>
-</div>
+    </div>
+    </div>
+</body>
+<script>
+    window.addEventListener("load", function () {
+        const form = document.getElementById('AKfycbyMvB4No5JCkbfZ5rsXZXlINYHyUhqFjRpEQqt2c8XNo_yaUyxDTVXdE9d1KUHSwKhlgQ');
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+                .then(() => {
+                    alert("Success! Please note you CAN fill this form again with other subjects :)");
+                })
+        });
+    });
 
+</script>
 
 </html>

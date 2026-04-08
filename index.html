@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,600;1,9..40,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/jdwXfLDH/image.png">
     <script src="https://accounts.google.com/gsi/client" async></script>
     <script>
         function decodeJWT(token) {
@@ -86,16 +87,21 @@
 
 </head>
 
-<body>
+<body style="padding-top: 0px;">
 
     <div class="header">
+        <img src='https://i.postimg.cc/jdwXfLDH/image.png' border='0' alt='image'
+            style="border-radius: 50%; height:60px;">
         MateMentors
+        <img src='https://i.postimg.cc/jdwXfLDH/image.png' border='0' alt='image'
+            style="border-radius: 50%; height:60px;">
         <!-- g_id_onload contains Google Identity Services settings -->
         <div id="g_id_onload" data-auto_prompt="false" data-callback="handleCredentialResponse"
             data-client_id="994443423384-6rif7s5vueaf6rm2t1fn6fh8mgsd6j2t.apps.googleusercontent.com"></div>
         <!-- g_id_signin places the button on a page and supports customization -->
         <div class="g_id_signin"> </div>
     </div>
+
     <div class="sidebar">
         <a href="index.html">
             <button class="sidebar-link">
@@ -124,7 +130,6 @@
         <a href="">
             <button class="sidebar-link">
                 <img src="">
-
             </button>
         </a>
     </div>

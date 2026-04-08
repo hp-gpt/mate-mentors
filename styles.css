@@ -1,6 +1,6 @@
 body {
     background-color: #ffe9d9;
-    font-family: DM Sans;
+    font-family: DM Sans !important;
     color: whitesmoke;
     padding-left: 100px;
     padding-right: 15px;
@@ -16,7 +16,7 @@ h2 {
 .header {
     position: fixed;
     margin: 0;
-    padding: 20px;
+    padding: 15px;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -24,13 +24,13 @@ h2 {
     text-align: center;
     border-style: solid;
     border-width: 0.1px;
-    background-image: radial-gradient(circle, orangered, coral, rgb(253, 138, 96));
+    background-image: radial-gradient(circle, #ff4500, coral, rgb(253, 138, 96));
     z-index: 100;
 }
 
 .nav-tabs {
     position: absolute;
-    top: 135px;
+    top: 150px;
     left: 96px;
     right: 10px;
     z-index: 0;
@@ -243,22 +243,19 @@ h2 {
     color: black;
     font-weight: 700;
     border-radius: 50px;
-    background-color: white;
+
 }
 
-.subjects,
-.student-info {
-    background-color: skyblue;
-    margin-bottom: 20px;
-    padding: 30px;
-    border-color: white;
-    border-radius: 80px;
-}
-
+.confirmation,
+.confirmation:after,
+.strengths,
+.strength:after,
+.weaknesses,
+.weaknesses:after,
 .grade,
 .grade:after {
-    background-image: linear-gradient(to bottom right, navy, deepskyblue, skyblue);
-    color: white;
+    background-color: white;
+    color: black;
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 40px;
@@ -268,14 +265,15 @@ h2 {
     transition-duration: 1s;
 }
 
+.confirmation:hover,
+.strengths:hover,
+.weaknesses:hover,
 .grade:hover,
 .button:hover {
-    background-color: rgba(0, 72, 255, 0.638);
+    background-color: rgba(255, 255, 255, 0.497);
     margin-bottom: 10px;
-    padding: 100px;
+    padding: 150px 0px;
     border-radius: 40px;
-    text-align: center;
-    font-size: 40px;
     transition-duration: 1s;
 }
 
@@ -292,6 +290,9 @@ h2 {
 }
 
 select {
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 20px;
     color: black;
 }
 
@@ -316,12 +317,16 @@ select {
         box-sizing: border-box;
     }
 
+    .form {
+        margin-top: 100px;
+    }
 
     input,
     select {
         width: 100%;
         box-sizing: border-box;
         font-size: 16px;
+        display: inline-block;
     }
 
     label {
@@ -339,4 +344,29 @@ select {
         border-radius: 30px;
     }
 
+    .strengths,
+    .strength:after,
+    .weaknesses,
+    .weaknesses:after,
+    .grade,
+    .grade:after {
+        margin-bottom: 10px;
+        padding: 15px 0px;
+        border-radius: 40px;
+        text-align: center;
+        font-size: 20px;
+        overflow: wrap;
+        cursor: pointer;
+        transition-duration: 1s;
+    }
+
+    .strengths:hover,
+    .weaknesses:hover,
+    .grade:hover,
+    .button:hover {
+        background-color: rgba(255, 255, 255, 0.497);
+        margin-bottom: 10px;
+        border-radius: 40px;
+        transition-duration: 1s;
+    }
 }
