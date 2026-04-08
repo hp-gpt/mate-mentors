@@ -1,0 +1,47 @@
+            <div class="weaknesses">
+                g Subjects: <br>
+                <input type="radio" name="weak-Subjects" value=Stron"Mathematics" class="weaknesses" required>
+                <span>Mathematics</span>
+
+                <input type="radio" name="weak-Subjects" value="Physics" class="weaknesses" required>
+                <span>Physics</span>
+
+                <input type="radio" name="weak-Subjects" value="Chemistry" class="weaknesses" required>
+                <span>Chemistry</span>
+
+                <input type="radio" name="weak-Subjects" value="Biology" class="weaknesses" required>
+                <span>Biology</span>
+
+                <input type="radio" name="weak-Subjects" value="History" class="weaknesses" required>
+                <span>History</span>
+
+                <input type="radio" name="weak-Subjects" value="Geography" class="weaknesses" required>
+                <span>Geography</span>
+
+                <input type="radio" name="weak-Subjects" value="English" class="weaknesses" required>
+                <span>English</span>
+
+                <input type="radio" name="weak-Subjects" value="Hindi" class="weaknesses" required>
+                <span>Hindi</span>
+
+                <input type="radio" name="weak-Subjects" value="French" class="weaknesses" required>
+                <span>French</span>
+
+                <input type="radio" name="weak-Subjects" value="Computer Science" class="weaknesses" required>
+                <span>Computer Science</span>
+
+                <input type="radio" name="weak-Subjects" value="Robotics" class="weaknesses" required>
+                <span>Robotics</span>
+
+                <input type="radio" name="weak-Subjects" value="Economics" class="weaknesses" required>
+                <span>Economics</span>
+
+                <input type="radio" name="weak-Subjects" value="Commerce" class="weaknesses" required>
+                <span>Commerve</span>
+
+                <input type="radio" name="weak-Subjects" value="Business Studies" class="weaknesses" required>
+                <span>Business Studies</span>
+
+                <input type="radio" name="weak-Subjects" value="Psychology" class="weaknesses" required>
+                <span>Psychology</span>
+            </div>
