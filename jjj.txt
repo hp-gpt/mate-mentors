@@ -1,5 +1,0 @@
-        <img src='https://i.postimg.cc/jdwXfLDH/image.png' border='0' alt='image'
-            style="border-radius: 50%; height:80px;">
-        MateMentors
-        <img src='https://i.postimg.cc/jdwXfLDH/image.png' border='0' alt='image'
-            style="border-radius: 50%; height:80px;">
