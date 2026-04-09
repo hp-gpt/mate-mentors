@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>MateMentors - Profile Card</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;1,9..40,200&display=swap"
@@ -24,7 +25,7 @@
                     signinElements[0].innerHTML = `
                     <div class="pfp">
                         <img src="${responsePayload.picture}" style="border-radius: 50%; width: 45px; height: 45px;"><br>
-                        <button onclick="logout()" style="cursor: pointer; padding: 5px;">Sign Out</button>
+                        <button onclick="logout()" style="cursor: pointer; padding: 5px; position: absolute; width: 80px; top: 75px; right: 0px; font-family: DM Sans; font-weight: 700; border-style: none;">Sign Out</button>
                     </div>
                     `;
                 }
@@ -50,8 +51,6 @@
             location.reload();
         }
     </script>
-
-
 </head>
 
 <body>
@@ -78,8 +77,9 @@
         </a>
         <a href="">
             <button class="sidebar-link">
-                <img src="">
-
+                <img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/026/630/551/small/profile-icon-symbol-design-illustration-vector.jpg">
+                PROFILE FORM
             </button>
         </a>
         <a href="">
@@ -106,7 +106,7 @@
             action="https://script.google.com/macros/s/AKfycbyMvB4No5JCkbfZ5rsXZXlINYHyUhqFjRpEQqt2c8XNo_yaUyxDTVXdE9d1KUHSwKhlgQ/exec">
             <div class="confirmation" id="confirm">
                 PLEASE SIGN IN BEFORE TRYING TO FILL THIS AREA IN.
-            </div>
+            </div> <br><br>
             <div class="strengths">
                 Strong Subjects: <br><br>
                 <input type="radio" name="StrongSubjects" value="Mathematics" class="strengths" required>
@@ -241,6 +241,7 @@
                 })
         });
     });
+
 
 </script>
 
