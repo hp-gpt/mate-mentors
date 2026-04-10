@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>MateMentors - Profile Card</title>
+    <title>Mate Mentors - Profile Card</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;1,9..40,200&display=swap"
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,600;1,9..40,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/jdwXfLDH/image.png">
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'">
     <script>
         window.addEventListener('load', function () {
             const savedData = localStorage.getItem('userProfile');
@@ -49,16 +49,16 @@
         function logout() {
             localStorage.removeItem('userProfile');
             location.reload();
-        }
+        };
     </script>
 </head>
 
 <body>
     <div class="header">
-        <img src='https://i.postimg.cc/jdwXfLDH/image.png' border='0' alt='image'
+        <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'' border=' 0' alt='image'
             style="border-radius: 50%; height:60px;">
         MateMentors
-        <img src='https://i.postimg.cc/jdwXfLDH/image.png' border='0' alt='image'
+        <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'' border=' 0' alt='image'
             style="border-radius: 50%; height:60px;">
         <!-- g_id_onload contains Google Identity Services settings -->
         <div id="g_id_onload" data-auto_prompt="false" data-callback="handleCredentialResponse"
@@ -67,7 +67,6 @@
         <div class="g_id_signin"> </div>
     </div>
 
-
     <div class="sidebar">
         <a href="index.html">
             <button class="sidebar-link">
@@ -75,14 +74,14 @@
                 HOME
             </button>
         </a>
-        <a href="">
+        <a href="register.html">
             <button class="sidebar-link">
                 <img
                     src="https://static.vecteezy.com/system/resources/thumbnails/026/630/551/small/profile-icon-symbol-design-illustration-vector.jpg">
-                PROFILE FORM
+                REGISTER
             </button>
         </a>
-        <a href="">
+        <a href="profile-card.html">
             <button class="sidebar-link">
                 <img src="">
 
@@ -97,160 +96,151 @@
         <a href="">
             <button class="sidebar-link">
                 <img src="">
-
             </button>
         </a>
     </div>
-    <div class="form">
-        <form method="POST" id="AKfycbyMvB4No5JCkbfZ5rsXZXlINYHyUhqFjRpEQqt2c8XNo_yaUyxDTVXdE9d1KUHSwKhlgQ"
-            action="https://script.google.com/macros/s/AKfycbyMvB4No5JCkbfZ5rsXZXlINYHyUhqFjRpEQqt2c8XNo_yaUyxDTVXdE9d1KUHSwKhlgQ/exec">
-            <div class="confirmation" id="confirm">
-                PLEASE SIGN IN BEFORE TRYING TO FILL THIS AREA IN.
-            </div> <br><br>
-            <div class="strengths">
-                Strong Subjects: <br><br>
-                <input type="checkbox" name="StrongSubjects" value="Mathematics" class="strengths" required>
-                <span>Mathematics</span>
 
-                <input type="checkbox" name="StrongSubjects" value="Physics" class="strengths">
-                <span>Physics</span>
+    <div id="cards-container" class="profile-card" style="top: 140px;">
 
-                <input type="checkbox" name="StrongSubjects" value="Chemistry" class="strengths">
-                <span>Chemistry</span>
-
-                <input type="checkbox" name="StrongSubjects" value="Biology" class="strengths">
-                <span>Biology</span>
-                <br><br>
-                <input type="checkbox" name="StrongSubjects" value="History" class="strengths">
-                <span>History</span>
-
-                <input type="checkbox" name="StrongSubjects" value="Geography" class="strengths">
-                <span>Geography</span>
-
-                <input type="checkbox" name="StrongSubjects" value="English" class="strengths">
-                <span>English</span>
-
-                <input type="checkbox" name="StrongSubjects" value="Hindi" class="strengths">
-                <span>Hindi</span>
-                <br><br>
-                <input type="checkbox" name="StrongSubjects" value="French" class="strengths">
-                <span>French</span>
-
-                <input type="checkbox" name="StrongSubjects" value="Computer Science" class="strengths">
-                <span>Computer Science</span>
-
-                <input type="checkbox" name="StrongSubjects" value="Robotics" class="strengths">
-                <span>Robotics</span>
-
-                <input type="checkbox" name="StrongSubjects" value="Economics" class="strengths">
-                <span>Economics</span>
-                <br><br>
-                <input type="checkbox" name="StrongSubjects" value="Commerce" class="strengths">
-                <span>Commerce</span>
-
-                <input type="checkbox" name="StrongSubjects" value="Business Studies" class="strengths">
-                <span>Business Studies</span>
-
-                <input type="checkbox" name="StrongSubjects" value="Psychology" class="strengths">
-                <span>Psychology</span>
-            </div>
-            <br><br>
-            <div class="weaknesses">
-                Weak Subjects: <br><br>
-                <input type="checkbox" name="WeakSubjects" value="Mathematics" class="weaknesses" required>
-                <span>Mathematics</span>
-
-                <input type="checkbox" name="WeakSubjects" value="Physics" class="weaknesses">
-                <span>Physics</span>
-
-                <input type="checkbox" name="WeakSubjects" value="Chemistry" class="weaknesses">
-                <span>Chemistry</span>
-
-                <input type="checkbox" name="WeakSubjects" value="Biology" class="weaknesses">
-                <span>Biology</span>
-                <br><br>
-                <input type="checkbox" name="WeakSubjects" value="History" class="weaknesses">
-                <span>History</span>
-
-                <input type="checkbox" name="WeakSubjects" value="Geography" class="weaknesses">
-                <span>Geography</span>
-
-                <input type="checkbox" name="WeakSubjects" value="English" class="weaknesses">
-                <span>English</span>
-
-                <input type="checkbox" name="WeakSubjects" value="Hindi" class="weaknesses">
-                <span>Hindi</span>
-                <br><br>
-                <input type="checkbox" name="WeakSubjects" value="French" class="weaknesses">
-                <span>French</span>
-
-                <input type="checkbox" name="WeakSubjects" value="Computer Science" class="weaknesses">
-                <span>Computer Science</span>
-
-                <input type="checkbox" name="WeakSubjects" value="Robotics" class="weaknesses">
-                <span>Robotics</span>
-
-                <input type="checkbox" name="WeakSubjects" value="Economics" class="weaknesses">
-                <span>Economics</span>
-                <br><br>
-                <input type="checkbox" name="WeakSubjects" value="Commerce" class="weaknesses">
-                <span>Commerce</span>
-
-                <input type="checkbox" name="WeakSubjects" value="Business Studies" class="weaknesses">
-                <span>Business Studies</span>
-
-                <input type="checkbox" name="WeakSubjects" value="Psychology" class="weaknesses">
-                <span>Psychology</span>
-            </div>
-
-            <br><br>
-            <div class="grade">
-                Grade Level: <br>
-                <select name="StudentGrade" required><br><br>
-                    <option value="" disabled selected>Select Grade</option>
-                    <option value="Grade 5">Grade 5</option>
-                    <option value="Grade 6">Grade 6</option>
-                    <option value="Grade 7">Grade 7</option>
-                    <option value="Grade 8">Grade 8</option>
-                    <option value="Grade 9">Grade 9</option>
-                    <option value="Grade 10">Grade 10</option>
-                    <option value="Grade 11">Grade 11</option>
-                    <option value="Grade 12">Grade 12</option>
-                </select>
-            </div>
     </div>
-    <div class="submit-button"><button type="submit" class="button">Submit</button>
-    </div>
-    </form>
-    </div>
-    </div>
+    <html>
+
+    <head>
+        <title>Mate Mentors - Profile Card</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;1,9..40,200&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,600;1,9..40,600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'">
+        <script>
+            window.addEventListener('load', function () {
+                const savedData = localStorage.getItem('userProfile');
+
+                if (savedData) {
+                    const responsePayload = JSON.parse(savedData);
+
+                    // 1. Update Header Image
+                    const signinElements = document.getElementsByClassName('g_id_signin');
+                    if (signinElements.length > 0) {
+                        signinElements[0].innerHTML = `
+                    <div class="pfp">
+                        <img src="${responsePayload.picture}" style="border-radius: 50%; width: 45px; height: 45px;"><br>
+                        <button onclick="logout()" style="cursor: pointer; padding: 5px; position: absolute; width: 80px; top: 75px; right: 0px; font-family: DM Sans; font-weight: 700; border-style: none;">Sign Out</button>
+                    </div>
+                    `;
+                    }
+
+                    const cardElements = document.getElementsByClassName('g_id_signin');
+                    if (signinElements.length > 0) {
+                        signinElements[0].innerHTML = `
+                    <div class="pfp">
+                        <img src="${responsePayload.picture}" style="border-radius: 50%; width: 45px; height: 45px;"><br>
+                        <button onclick="logout()" style="cursor: pointer; padding: 5px; position: absolute; width: 80px; top: 75px; right: 0px; font-family: DM Sans; font-weight: 700; border-style: none;">Sign Out</button>
+                    </div>
+                    `;
+
+
+                    } else {
+                        // If NO data is found
+                        alert('Please sign in. You will be redirected to the home page to sign in');
+                        window.location.href = "index.html";
+                    }
+                };
+
+            });
+            function logout() {
+                localStorage.removeItem('userProfile');
+                location.reload();
+            };
+
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'' border=' 0' alt='image'
+                style="border-radius: 50%; height:60px;">
+            MateMentors
+            <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'' border=' 0' alt='image'
+                style="border-radius: 50%; height:60px;">
+            <!-- g_id_onload contains Google Identity Services settings -->
+            <div id="g_id_onload" data-auto_prompt="false" data-callback="handleCredentialResponse"
+                data-client_id="994443423384-6rif7s5vueaf6rm2t1fn6fh8mgsd6j2t.apps.googleusercontent.com"></div>
+            <!-- g_id_signin places the button on a page and supports customization -->
+            <div class="g_id_signin"> </div>
+        </div>
+
+        <div class="sidebar">
+            <a href="index.html">
+                <button class="sidebar-link">
+                    <img src="https://www.svgrepo.com/show/535437/home.svg">
+                    HOME
+                </button>
+            </a>
+            <a href="register.html">
+                <button class="sidebar-link">
+                    <img src="https://www.svgrepo.com/show/435930/register.svg">
+                    REGISTER
+                </button>
+            </a>
+            <a href="profile-card.html">
+                <button class="sidebar-link">
+                    <img src="https://www.svgrepo.com/show/512712/profile-image-round-1326.svg">
+                    PROFILE CARD
+                </button>
+            </a>
+            <a href="">
+                <button class="sidebar-link">
+                    <img src="">
+
+                </button>
+            </a>
+            <a href="">
+                <button class="sidebar-link">
+                    <img src="">
+                </button>
+            </a>
+        </div>
+
+
+        <div id="cards-container">
+
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+        <script>
+            const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTq_ZFivaehEXzkN7TQ0gUo6bBPMo-9dOfk-VY7PPRpo5Sky1GHPt_nOpnkhISosR3qfpsynMQaxC75/pub?output=csv"
+
+            fetch(SHEET_URL, { redirect: 'follow' })
+                .then(r => r.text())
+                .then(csv => {
+                    const results = Papa.parse(csv, { header: true })
+                    results.data.forEach(row => {
+                        const card = document.createElement("div")
+                        card.classList.add("profile-card")
+                        card.innerHTML = `
+                            <img src ="${row['PFP']}" style="border-radius: 50%;">
+                            <h3>${row['Name']}</h3>
+                            <p>Grade: ${row['StudentGrade']}</p>
+                            <p>Can teach: ${row['StrongSubjects']}</p>
+                            <p>Needs help with: ${row['WeakSubjects']}</p>
+                        `
+                        document.getElementById("cards-container").appendChild(card)
+                    })
+                })
+        </script>
+    </body>
+
+
+    </html>
 </body>
-<script>
-    window.addEventListener("load", function () {
-        const form = document.getElementById('AKfycbyMvB4No5JCkbfZ5rsXZXlINYHyUhqFjRpEQqt2c8XNo_yaUyxDTVXdE9d1KUHSwKhlgQ');
-        form.addEventListener("submit", function (e) {
-            e.preventDefault()
 
-            const action = e.target.action  // ← this was missing!
-
-            const strongSubjects = [...document.querySelectorAll('input[name="StrongSubjects"]:checked')]
-                .map(cb => cb.value)
-                .join(", ")
-
-            const weakSubjects = [...document.querySelectorAll('input[name="WeakSubjects"]:checked')]
-                .map(cb => cb.value)
-                .join(", ")
-
-            const data = new FormData(form)
-            data.set("StrongSubjects", strongSubjects)
-            data.set("WeakSubjects", weakSubjects)
-
-            fetch(action, { method: 'POST', body: data })
-                .then(() => alert("Success!")); window.location.href("index.html")
-        })
-    });
-
-
-</script>
 
 </html>

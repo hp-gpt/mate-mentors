@@ -93,7 +93,6 @@ h2 {
     width: 90px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding-top: 100px;
     padding-bottom: 10px;
     margin-right: 0px;
@@ -110,14 +109,14 @@ h2 {
     height: 90px;
     width: 90px;
     padding: 15px;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     text-align: center;
     font-family: DM Sans;
-    border-style: hidden;
-    border-radius: 10px;
+    border-style: solid;
+    border-color: rgba(255, 68, 0, 0.311);
     transition-duration: 1s;
     letter-spacing: -1px;
     line-height: -1px;
@@ -129,7 +128,6 @@ h2 {
     background-color: lightsalmon;
     cursor: pointer;
     transition: 0.5s;
-    border-radius: 20px;
     color: white;
 }
 
@@ -164,7 +162,6 @@ h2 {
         height: 70px;
         flex-direction: row;
         padding: 5px 10px;
-        justify-content: space-between;
         border-radius: 0px;
     }
 
@@ -172,7 +169,6 @@ h2 {
         left: 0px !important;
         right: 0px !important;
         width: 100% !important;
-        justify-content: space-around;
         border-radius: 0px !important;
         padding: 5px 0px;
     }
@@ -247,6 +243,7 @@ h2 {
 
 }
 
+
 .confirmation,
 .confirmation:after,
 .strengths,
@@ -280,6 +277,7 @@ h2 {
 
 .submit-button {
     background-color: white;
+    top: 20px;
     margin-bottom: 10px;
     padding-top: 20px;
     padding-bottom: 15px;
@@ -349,6 +347,8 @@ select {
         border-radius: 30px;
     }
 
+
+
     .strengths,
     .strength:after,
     .weaknesses,
@@ -374,4 +374,33 @@ select {
         border-radius: 40px;
         transition-duration: 1s;
     }
+}
+
+.profile-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.profile-card h3 {
+    color: orangered;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.profile-card p {
+    color: #2a2a2a;
+    font-size: 30px;
+    margin: 6px 0;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    gap: 16px;
 }
