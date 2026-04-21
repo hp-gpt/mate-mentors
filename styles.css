@@ -33,7 +33,7 @@ h2 {
     top: 150px;
     left: 96px;
     right: 10px;
-    z-index: 0;
+    z-index: 1;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -69,6 +69,7 @@ h2 {
     border-radius: 50px;
     background-color: white;
     margin-bottom: 0px;
+    z-index: 0;
     animation: fadeIn 0.5s ease;
 }
 
@@ -168,9 +169,10 @@ h2 {
     .sidebar {
         left: 0px !important;
         right: 0px !important;
-        width: 100% !important;
         border-radius: 0px !important;
         padding: 5px 0px;
+        display: flex;
+        justify-content: space-between;
     }
 
 
@@ -219,6 +221,7 @@ h2 {
     .section {
         border-radius: 30px;
         margin-left: 0px;
+        z-index: 1;
     }
 
     .photo {
@@ -388,6 +391,11 @@ select {
 .profile-card h3 {
     color: orangered;
     font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.profile-card b {
+    color: orangered;
     margin-bottom: 12px;
 }
 

@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Mate Mentors - Profile Card</title>
+    <title>MateMentors - Register</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;1,9..40,200&display=swap"
@@ -13,78 +13,65 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'">
     <script>
+        function showUserImage(responsePayload) {
+            const signinElements = document.getElementsByClassName('g_id_signin');
+            if (signinElements.length > 0) {
+                signinElements[0].innerHTML = `
+                <div class="pfp">
+                    <img src="${responsePayload.picture}" style="border-radius: 50%; width: 45px; height: 45px;"><br>
+                    <button onclick="logout()" style="cursor: pointer; padding: 5px; position: absolute; width: 80px; top: 75px; right: 0px; font-family: DM Sans; font-weight: 700; border-style: none;">Sign Out</button>
+                </div>
+                `;
+            }
+        }
+
+        // NEW: This runs automatically when you refresh the page
         window.addEventListener('load', function () {
             const savedData = localStorage.getItem('userProfile');
-
             if (savedData) {
                 const responsePayload = JSON.parse(savedData);
-
-                // 1. Update Header Image
-                const signinElements = document.getElementsByClassName('g_id_signin');
-                if (signinElements.length > 0) {
-                    signinElements[0].innerHTML = `
-                    <div class="pfp">
-                        <img src="${responsePayload.picture}" style="border-radius: 50%; width: 45px; height: 45px;"><br>
-                        <button onclick="logout()" style="cursor: pointer; padding: 5px; position: absolute; width: 80px; top: 75px; right: 0px; font-family: DM Sans; font-weight: 700; border-style: none;">Sign Out</button>
-                    </div>
-                    `;
-                }
-
-                // 2. Update Confirmation Area (MOVED INSIDE HERE)
-                // Using your exact variable names and structure
-                document.getElementById('confirm').innerHTML = `
-                    <input type="checkbox" value="${responsePayload.email}" name="Email" checked required > 
-                    Confirm email: ${responsePayload.email} <br>
-                    <input type="checkbox" value="${responsePayload.name}" name="Name" checked required> 
-                    Confirm name: ${responsePayload.name}
-                `;
-
-            } else {
-                // If NO data is found
-                alert('Please sign in. You will be redirected to the home page to sign in');
-                window.location.href = "index.html";
+                showUserImage(responsePayload);
             }
         });
-
         function logout() {
+            // 1. Clear the saved profile from browser memory
             localStorage.removeItem('userProfile');
+
+            // 2. Refresh the page to show the login button again
             location.reload();
-        };
+        }
     </script>
 </head>
 
 <body>
     <div class="header">
-        <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'' border=' 0' alt='image'
-            style="border-radius: 50%; height:60px;">
+        <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png' alt='image' style="border-radius: 50%; height:60px;">
         MateMentors
-        <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'' border=' 0' alt='image'
-            style="border-radius: 50%; height:60px;">
+        <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png' alt='image' style="border-radius: 50%; height:60px;">
         <!-- g_id_onload contains Google Identity Services settings -->
         <div id="g_id_onload" data-auto_prompt="false" data-callback="handleCredentialResponse"
             data-client_id="994443423384-6rif7s5vueaf6rm2t1fn6fh8mgsd6j2t.apps.googleusercontent.com"></div>
         <!-- g_id_signin places the button on a page and supports customization -->
-        <div class="g_id_signin"> </div>
+        <div class="g_id_signin" style="z-index:10000 !important; position:absolute; "> </div>
     </div>
 
-    <div class="sidebar">
+    <div class=" sidebar">
         <a href="index.html">
             <button class="sidebar-link">
-                <img src="https://i.postimg.cc/26x1tg4y/home.png">
+                <img src="https://www.svgrepo.com/show/535437/home.svg">
                 HOME
             </button>
         </a>
         <a href="register.html">
             <button class="sidebar-link">
-                <img
-                    src="https://static.vecteezy.com/system/resources/thumbnails/026/630/551/small/profile-icon-symbol-design-illustration-vector.jpg">
+                <img src="https://www.svgrepo.com/show/435930/register.svg">
                 REGISTER
             </button>
         </a>
         <a href="profile-card.html">
             <button class="sidebar-link">
-                <img src="">
-
+                <img src="https://www.svgrepo.com/show/512712/profile-image-round-1326.svg">
+                PROFILE CARD
             </button>
         </a>
         <a href="">
@@ -137,24 +124,13 @@
                     `;
                     }
 
-                    const cardElements = document.getElementsByClassName('g_id_signin');
-                    if (signinElements.length > 0) {
-                        signinElements[0].innerHTML = `
-                    <div class="pfp">
-                        <img src="${responsePayload.picture}" style="border-radius: 50%; width: 45px; height: 45px;"><br>
-                        <button onclick="logout()" style="cursor: pointer; padding: 5px; position: absolute; width: 80px; top: 75px; right: 0px; font-family: DM Sans; font-weight: 700; border-style: none;">Sign Out</button>
-                    </div>
-                    `;
-
-
-                    } else {
-                        // If NO data is found
-                        alert('Please sign in. You will be redirected to the home page to sign in');
-                        window.location.href = "index.html";
-                    }
-                };
-
+                } else {
+                    // If NO data is found
+                    alert('Please sign in. You will be redirected to the home page to sign in');
+                    window.location.href = "index.html";
+                }
             });
+
             function logout() {
                 localStorage.removeItem('userProfile');
                 location.reload();
@@ -165,10 +141,10 @@
 
     <body>
         <div class="header">
-            <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'' border=' 0' alt='image'
+            <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png' alt='image'
                 style="border-radius: 50%; height:60px;">
             MateMentors
-            <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png'' border=' 0' alt='image'
+            <img src='https://i.postimg.cc/2bZwwb5z/Mate-Mentors.png' alt='image'
                 style="border-radius: 50%; height:60px;">
             <!-- g_id_onload contains Google Identity Services settings -->
             <div id="g_id_onload" data-auto_prompt="false" data-callback="handleCredentialResponse"
@@ -228,9 +204,9 @@
                         card.innerHTML = `
                             <img src ="${row['PFP']}" style="border-radius: 50%;">
                             <h3>${row['Name']}</h3>
-                            <p>Grade: ${row['StudentGrade']}</p>
-                            <p>Can teach: ${row['StrongSubjects']}</p>
-                            <p>Needs help with: ${row['WeakSubjects']}</p>
+                            <p><b>Grade:</b> ${row['StudentGrade']}</p>
+                            <p><b>Can teach:</b> ${row['StrongSubjects']}</p>
+                            <p><b>Needs help with:</b> ${row['WeakSubjects']}</p>
                         `
                         document.getElementById("cards-container").appendChild(card)
                     })
