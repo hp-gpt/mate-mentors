@@ -22,10 +22,25 @@
             data-client_id="994443423384-6rif7s5vueaf6rm2t1fn6fh8mgsd6j2t.apps.googleusercontent.com"></div>
         <!-- g_id_signin places the button on a page and supports customization -->
         <div class="g_id_signin" style=" right: 0px; "> </div>
-        <!-- Welcome To MateMentors! -->
+        Welcome To MateMentors! <div class="preview"></div>
 
     </div>
 
+
+
+
 </body>
+<script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("test-header").style.padding = "40px 0px";
+        } else {
+            document.getElementById("test-header").style.padding = "150px 0px";
+        }
+    }
+
+</script>
 
 </html>
